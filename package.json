@@ -1,0 +1,7 @@
+{
+  "name": "rails7_sorting_dropdown_stimulus_turbo",
+  "version": "1.0.0",
+  "dependencies": {
+    "@hotwired/stimulus": "^3.2.2"
+  }
+}

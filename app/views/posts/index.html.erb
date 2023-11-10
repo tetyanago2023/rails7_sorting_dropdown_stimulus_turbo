@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+<h1>Posts</h1>
+<!--<input type="text">-->
+<div data-controller="post-sort">
+  <label for="sort_by">Sort by:</label>
+  <select name="sort_by" id="sort_by" data-action="post-sort#update" data-post-sort-target="select">
+    <option value="time_posted" <%= 'selected' if params[:sort_by] == 'time_posted' %>>Newest</option>
+    <option value="time_posted_reverse" <%= 'selected' if params[:sort_by] == 'time_posted_reverse' %>>Oldest</option>
+    <option value="alphabetical" <%= 'selected' if params[:sort_by] == 'alphabetical' %>>A-Z</option>
+    <option value="alphabetical_reverse" <%= 'selected' if params[:sort_by] == 'alphabetical_reverse' %>>Z-A</option>
+  </select>
+</div>
+<%= render "posts" %>
+<%= link_to "New post", new_post_path %>
